@@ -15,5 +15,6 @@ if __name__ == "__main__":
 	data = np.loadtxt(FILENAME, delimiter=",", dtype="string")
 	images = map(loadimage, data)#画像をすべて開く
 	v = np.vstack(images)#画像を縦に並べる
+	#h = np.hstack(images)画像を横に並べる
 	Image.fromarray(np.uint8(v)).save("stkimage.png")
 	print("img saved.")
